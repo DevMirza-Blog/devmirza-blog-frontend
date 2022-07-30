@@ -2,10 +2,10 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 export interface ICategory {
   id: number;
-  attributes: ICategoryAttributes;
+  attributes: ICategoryAttribute;
 }
 
-export interface ICategoryAttributes {
+export interface ICategoryAttribute {
   Title: string;
   Slug: string;
 }
