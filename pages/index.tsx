@@ -26,13 +26,13 @@ interface IPropTypes {
 }
 
 const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
-  const router = useRouter();
+  //const router = useRouter();
 
   //const { page, pageCount } = articles.pagination;
 
-  const handleSearch = (query: string) => {
-    router.push(`/?search=${query}`);
-  };
+  //const handleSearch = (query: string) => {
+  //  router.push(`/?search=${query}`);
+  //};
 
   return (
     <div>
@@ -46,7 +46,7 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
         categories={categories.items}
         handleOnSearch={debounce(handleSearch, 500)}
       /> */}
-      <ArticleList articles={articles.items} />
+      {/* <ArticleList articles={articles.items} /> */}
       {/* <Pagination page={page} pageCount={pageCount} /> */}
     </div>
   );
