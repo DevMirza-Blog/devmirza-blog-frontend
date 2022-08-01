@@ -11,9 +11,10 @@ import {
   IPagination,
   IQueryOptions,
 } from "../types";
-// import qs from "qs";
+import qs from "qs";
 import { useRouter } from "next/router";
 import { debounce } from "../utils/index";
+import { fetchArticles, fetchCategories } from "../http";
 
 interface IPropTypes {
   categories: {
@@ -26,13 +27,13 @@ interface IPropTypes {
 }
 
 const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
-  //const router = useRouter();
+  const router = useRouter();
 
-  //const { page, pageCount } = articles.pagination;
+  const { page, pageCount } = articles.pagination;
 
-  //const handleSearch = (query: string) => {
-  //  router.push(`/?search=${query}`);
-  //};
+  const handleSearch = (query: string) => {
+    router.push(`/?search=${query}`);
+  };
 
   return (
     <div>
@@ -42,14 +43,55 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Tabs
+      <Tabs
         categories={categories.items}
         handleOnSearch={debounce(handleSearch, 500)}
-      /> */}
+      />
       {/* <ArticleList articles={articles.items} /> */}
       {/* <Pagination page={page} pageCount={pageCount} /> */}
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  // articles
+  const options: Partial<IQueryOptions> = {
+    populate: ["author.avatar"],
+    sort: ["id:desc"],
+    pagination: {
+      page: query.page ? +query.page : 1,
+      pageSize: 1,
+    },
+  };
+
+  if (query.search) {
+    options.filters = {
+      Title: {
+        $containsi: query.search,
+      },
+    };
+  }
+
+  const queryString = qs.stringify(options);
+
+  const { data: articles }: AxiosResponse<ICollectionResponse<IArticle[]>> =
+    await fetchArticles(queryString);
+
+  // categories
+  const { data: categories }: AxiosResponse<ICollectionResponse<ICategory[]>> =
+    await fetchCategories();
+
+  return {
+    props: {
+      categories: {
+        items: categories.data,
+      },
+      articles: {
+        items: [],
+        pagination: [],
+      },
+    },
+  };
 };
 
 export default Home;

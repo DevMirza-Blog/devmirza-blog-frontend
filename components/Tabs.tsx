@@ -1,6 +1,12 @@
 import React from "react";
+import { ICategory } from "../types";
 
-const Tabs = () => {
+interface IPropType {
+  categories: ICategory[];
+  handleOnSearch: (query: string) => void;
+}
+
+const Tabs = ({ categories, handleOnSearch }: IPropType) => {
   return <div>Tabs</div>;
 };
 
