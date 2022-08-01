@@ -35,7 +35,7 @@ const Tabs = ({ categories, handleOnSearch }: IPropType) => {
             <li
               key={category.id}
               className={
-                "mr-6 pb-6 border-b-4 rounded-sm" +
+                "mr-6 pb-6 border-b-4 rounded-sm " +
                 `${
                   isActiveLink(category)
                     ? "border-primary text-primary"
