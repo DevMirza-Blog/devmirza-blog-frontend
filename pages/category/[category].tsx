@@ -43,7 +43,7 @@ const category = ({ categories, articles, slug }: IPropType) => {
   return (
     <>
       <Head>
-        <title>DevMirza Blog {formattedCategory()}</title>
+        <title>DevMirza Blog | {formattedCategory()}</title>
         <meta name="description" content="DevMirza Blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
