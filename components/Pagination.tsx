@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = () => {
+const Pagination = ({ page, pageCount, redirectUrl = "/" }) => {
   return <div>Pagination</div>;
 };
 

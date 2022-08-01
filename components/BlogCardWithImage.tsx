@@ -1,6 +1,11 @@
 import React from "react";
+import { IArticle } from "../types";
 
-const BlogCardWithImage = () => {
+interface IPropType {
+  article: IArticle;
+}
+
+const BlogCardWithImage = ({ article }: IPropType) => {
   return <div>BlogCardWithImage</div>;
 };
 

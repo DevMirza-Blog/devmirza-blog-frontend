@@ -12,6 +12,18 @@ export const formatData = (dateString: string): string => {
   return data;
 };
 
+export const makeCategory = (slug: string): string => {
+  if (typeof slug === "string") {
+    return slug.split("-").join(" ");
+  }
+
+  return "";
+};
+
+export const capitalizeFirstLetter = (str: string): string => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
 export const debounce = (fn: (query: string) => void, timeout = 300) => {
   let timer: NodeJS.Timeout;
   const debounced = (...args: any) => {
@@ -22,4 +34,15 @@ export const debounce = (fn: (query: string) => void, timeout = 300) => {
   };
 
   return debounced;
+};
+
+export const serializeMarkdown = async (item: IArticle) => {
+  const body = await serialize(item.attributes.body as string);
+  return {
+    ...item,
+    attributes: {
+      ...item.attributes,
+      body,
+    },
+  };
 };
