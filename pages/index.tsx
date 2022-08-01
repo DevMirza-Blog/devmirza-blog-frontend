@@ -11,7 +11,7 @@ import {
   IPagination,
   IQueryOptions,
 } from "../types";
-import qs from "qs";
+// import qs from "qs";
 import { useRouter } from "next/router";
 import { debounce } from "../utils/index";
 
