@@ -29,8 +29,8 @@ interface IPropType {
 }
 
 const category = ({ categories, articles, slug }: IPropType) => {
-  const router = useRouter();
   const { page, pageCount } = articles.pagination;
+  const router = useRouter();
   const { category: categorySlug } = router.query;
 
   const formattedCategory = () => {
@@ -40,6 +40,7 @@ const category = ({ categories, articles, slug }: IPropType) => {
   const handleSearch = (query: string) => {
     router.push(`/category/${categorySlug}/?search=${query}`);
   };
+
   return (
     <>
       <Head>
