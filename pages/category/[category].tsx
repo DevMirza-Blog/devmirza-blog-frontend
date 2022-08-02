@@ -86,7 +86,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     };
   }
 
-  const queryString = qs.stringify(query);
+  const queryString = qs.stringify(options);
 
   const { data: articles }: AxiosResponse<ICollectionResponse<IArticle[]>> =
     await fetchArticles(queryString);
@@ -98,6 +98,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     props: {
       categories: {
         items: categories.data,
+        pagination: categories.meta.pagination,
       },
       articles: {
         items: articles.data,
