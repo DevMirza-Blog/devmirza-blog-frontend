@@ -1,39 +1,39 @@
-import { AxiosResponse } from "axios";
-import type { GetServerSideProps, NextPage } from "next";
-import Head from "next/head";
-import ArticleList from "../components/ArticleList";
-import Tabs from "../components/Tabs";
-import Pagination from "../components/Pagination";
+import { AxiosResponse } from 'axios'
+import type { GetServerSideProps, NextPage } from 'next'
+import Head from 'next/head'
+import ArticleList from '../components/ArticleList'
+import Tabs from '../components/Tabs'
+import Pagination from '../components/Pagination'
 import {
   IArticle,
   ICategory,
   ICollectionResponse,
   IPagination,
   IQueryOptions,
-} from "../types";
-import qs from "qs";
-import { useRouter } from "next/router";
-import { debounce } from "../utils/index";
-import { fetchArticles, fetchCategories } from "../http";
+} from '../types'
+import qs from 'qs'
+import { useRouter } from 'next/router'
+import { debounce } from '../utils/index'
+import { fetchArticles, fetchCategories } from '../http'
 
 interface IPropTypes {
   categories: {
-    items: ICategory[];
-  };
+    items: ICategory[]
+  }
   articles: {
-    items: IArticle[];
-    pagination: IPagination;
-  };
+    items: IArticle[]
+    pagination: IPagination
+  }
 }
 
 const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
-  const router = useRouter();
+  const router = useRouter()
 
-  const { page, pageCount } = articles.pagination;
+  const { page, pageCount } = articles.pagination
 
   const handleSearch = (query: string) => {
-    router.push(`/?search=${query}`);
-  };
+    router.push(`/?search=${query}`)
+  }
 
   return (
     <div>
@@ -50,36 +50,36 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
       <ArticleList articles={articles.items} />
       {/* <Pagination page={page} pageCount={pageCount} /> */}
     </div>
-  );
-};
+  )
+}
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  // articles
+  // Articles
   const options: Partial<IQueryOptions> = {
-    populate: ["author.avatar"],
-    sort: ["id:desc"],
+    populate: ['author.avatar'],
+    sort: ['id:desc'],
     pagination: {
       page: query.page ? +query.page : 1,
       pageSize: 1,
     },
-  };
+  }
 
   if (query.search) {
     options.filters = {
       Title: {
         $containsi: query.search,
       },
-    };
+    }
   }
 
-  const queryString = qs.stringify(options);
+  const queryString = qs.stringify(options)
 
   const { data: articles }: AxiosResponse<ICollectionResponse<IArticle[]>> =
-    await fetchArticles(queryString);
+    await fetchArticles(queryString)
 
   // categories
   const { data: categories }: AxiosResponse<ICollectionResponse<ICategory[]>> =
-    await fetchCategories();
+    await fetchCategories()
 
   return {
     props: {
@@ -87,11 +87,11 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
         items: categories.data,
       },
       articles: {
-        items: [],
-        pagination: [],
+        items: articles.data,
+        pagination: articles.meta.pagination,
       },
     },
-  };
-};
+  }
+}
 
-export default Home;
+export default Home

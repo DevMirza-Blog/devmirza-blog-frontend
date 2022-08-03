@@ -16,7 +16,18 @@ const BlogCard = ({ article }: IPropType) => {
         </h1>
       </Link>
       <div className="flex items-center my-4">
-        <div></div>
+        <div>
+          <Image
+            src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+            height={40}
+            width={40}
+          />
+        </div>
+        <span>
+          {article.attributes.author.data.attributes.firstname}{' '}
+          {article.attributes.author.data.attributes.lastname} on
+          <span className="text-gray-400"> {article.attributes.createdAt}</span>
+        </span>
       </div>
     </div>
   )
