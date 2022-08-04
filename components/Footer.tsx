@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2022 DevMirza Blog — All rights reserved —
           <a
-            href="htpps://github.com/Zaid-maker"
+            href="https://github.com/Zaid-maker"
             className="text-gray-600 ml-1"
             rel="noopener noreferrer"
             target="_blank"
@@ -81,7 +81,7 @@ const Footer = () => {
         </span>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
