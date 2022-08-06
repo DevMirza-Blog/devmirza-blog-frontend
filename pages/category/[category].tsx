@@ -30,13 +30,13 @@ interface IPropType {
 }
 
 const category = ({ categories, articles, slug }: IPropType) => {
-  const router = useRouter()
-  const { category: categorySlug } = router.query
+  //const router = useRouter()
+  //const { category: categorySlug } = router.query
   const { page, pageCount } = articles.pagination
 
-  const handleSearch = (query: string) => {
-    router.push(`/category/${categorySlug}/?search=${query}`)
-  }
+  //const handleSearch = (query: string) => {
+  //  router.push(`/category/${categorySlug}/?search=${query}`)
+  //}
 
   const formattedCategory = () => {
     return capitalizeFirstLetter(makeCategory(slug))
@@ -50,16 +50,16 @@ const category = ({ categories, articles, slug }: IPropType) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Tabs
+      {/* <Tabs
         categories={categories.items}
         handleOnSearch={debounce(handleSearch, 500)}
-      />
+      /> */}
       <ArticleList articles={articles.items} />
-      <Pagination
+      {/* <Pagination
         page={page}
         pageCount={pageCount}
         redirectUrl={`/category/${categorySlug}`}
-      />
+      /> */}
     </>
   )
 }
