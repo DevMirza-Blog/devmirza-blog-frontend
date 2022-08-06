@@ -20,6 +20,7 @@ const BlogCard = ({ article }: IPropType) => {
         <div className="rounded-lg overflow-hidden flex items-center justify-center mr-2">
           <Image
             src={`http://localhost:1337${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+            alt="avatar"
             height={40}
             width={40}
           />
