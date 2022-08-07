@@ -30,16 +30,16 @@ interface IPropType {
 }
 
 const category = ({ categories, articles, slug }: IPropType) => {
+  const { page, pageCount } = articles.pagination
   const router = useRouter()
   const { category: categorySlug } = router.query
-  const { page, pageCount } = articles.pagination
-
-  const handleSearch = (query: string) => {
-    router.push(`/category/${categorySlug}/?search=${query}`)
-  }
 
   const formattedCategory = () => {
     return capitalizeFirstLetter(makeCategory(slug))
+  }
+
+  const handleSearch = (query: string) => {
+    router.push(`/category/${categorySlug}/?search=${query}`)
   }
 
   return (
