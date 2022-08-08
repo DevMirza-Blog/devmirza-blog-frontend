@@ -35,7 +35,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
               />
             </div>
             <span>
-              {article.attributes.author.data.attributes.firstname}
+              Published By {article.attributes.author.data.attributes.firstname}
               {''}
               {article.attributes.author.data.attributes.lastname} on &nbsp;
               <span className="text-gray-400">
