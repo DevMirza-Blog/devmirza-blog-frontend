@@ -13,16 +13,16 @@ const Navbar = () => {
       </Link>
       <ul className="flex items-center">
         <li className="mr-6 font-medium text-gray-600">
-          <a href="#">Products</a>
+          <a href="/products">Products</a>
         </li>
         <li className="mr-6 font-medium text-gray-600">
-          <a href="#">pricing</a>
+          <a href="/pricing">pricing</a>
         </li>
         <li className="mr-6 font-medium text-gray-600">
-          <a href="#">Docs</a>
+          <a href="/documentation">Docs</a>
         </li>
         <li className="mr-6 font-medium text-gray-600">
-          <a href="#">Company</a>
+          <a href="/company">Company</a>
         </li>
       </ul>
       <ul className="flex items-center">
