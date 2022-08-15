@@ -1,6 +1,12 @@
+import Head from 'next/head'
+
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>404</title>
+        <meta name="description" content="404, You've taken a wrong turn." />
+      </Head>
       <section>
         <div className="min-h-screen px-4 mx-auto max-w-7xl sm:px-12 lg:px-24 lg:py-24">
           <div className="flex flex-col w-full mb-12 text-left lg:text-center">
