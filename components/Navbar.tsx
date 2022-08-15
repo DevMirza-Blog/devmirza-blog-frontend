@@ -27,13 +27,13 @@ const Navbar = () => {
       </ul>
       <ul className="flex items-center">
         <li className="mr-6 font-medium text-gray-600">
-          <a href="#" className="hover:text-gray-400">
+          <a href="/login" className="hover:text-gray-400">
             Log in
           </a>
         </li>
         <li className="font-medium text-gray-600">
           <a
-            href="#"
+            href="/signup"
             className="bg-primary py-2 px-4 rounded-sm text-white hover:bg-primary-dark transition-all"
           >
             Sign up
