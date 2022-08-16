@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import NextNProgress from 'nextjs-progressbar'
 import { ThemeProvider } from 'next-themes'
+import Divider from '../components/Divider'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Navbar />
           <main className="pb-32">
             <Component {...pageProps} />
+            <Divider />
           </main>
           <Footer />
         </div>

@@ -1,30 +1,30 @@
-import React from "react";
-import Link from "next/link";
-import { ICategory } from "../types";
-import { useRouter } from "next/router";
+import React from 'react'
+import Link from 'next/link'
+import { ICategory } from '../types'
+import { useRouter } from 'next/router'
 
 interface IPropType {
-  categories: ICategory[];
-  handleOnSearch: (query: string) => void;
+  categories: ICategory[]
+  handleOnSearch: (query: string) => void
 }
 
 const Tabs = ({ categories, handleOnSearch }: IPropType) => {
-  const router = useRouter();
+  const router = useRouter()
 
   const isActiveLink = (category: ICategory) => {
-    return category.attributes.Slug === router.query.category;
-  };
+    return category.attributes.Slug === router.query.category
+  }
 
   return (
-    <div className="my-8 flex items-center justify-between border-b-2 border-gray-100">
+    <div className="my-3 flex items-center justify-between">
       <ul className="flex items-center">
         <li
           className={
-            "mr-6 pb-6 border-b-4 rounded-sm " +
+            'mr-6 pb-3 border-b-4 rounded-sm ' +
             `${
-              router.pathname === "/"
-                ? "border-primary text-primary"
-                : "border-white text-gray-400"
+              router.pathname === '/'
+                ? 'border-primary text-primary'
+                : 'border-white text-black dark:text-white'
             }`
           }
         >
@@ -35,11 +35,11 @@ const Tabs = ({ categories, handleOnSearch }: IPropType) => {
             <li
               key={category.id}
               className={
-                "mr-6 pb-6 border-b-4 rounded-sm " +
+                'mr-6 pb-3 border-b-4 rounded-sm ' +
                 `${
                   isActiveLink(category)
-                    ? "border-primary text-primary"
-                    : "border-white text-gray-400"
+                    ? 'border-primary text-primary'
+                    : 'border-white text-black dark:text-white'
                 }`
               }
             >
@@ -47,12 +47,12 @@ const Tabs = ({ categories, handleOnSearch }: IPropType) => {
                 {category.attributes.Title}
               </Link>
             </li>
-          );
+          )
         })}
       </ul>
       <div className="flex items-center">
         <svg
-          className="h-4 fill-gray-500"
+          className="h-4 fill-dark dark:fill-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -62,11 +62,11 @@ const Tabs = ({ categories, handleOnSearch }: IPropType) => {
           onChange={(e) => handleOnSearch(e.target.value)}
           type="text"
           placeholder="Search articles..."
-          className="outline-none px-2 py-1 ml-1"
+          className="rounded-full text-dark dark:text-white outline-none px-3 py-1 ml-1"
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Tabs;
+export default Tabs

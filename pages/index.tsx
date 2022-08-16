@@ -15,6 +15,7 @@ import qs from 'qs'
 import { useRouter } from 'next/router'
 import { debounce } from '../utils/index'
 import { fetchArticles, fetchCategories } from '../http'
+import Divider from '../components/Divider'
 
 interface IPropTypes {
   categories: {
@@ -46,6 +47,7 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
         categories={categories.items}
         handleOnSearch={debounce(handleSearch, 500)}
       />
+      <Divider />
       <ArticleList articles={articles.items} />
       <Pagination page={page} pageCount={pageCount} />
     </div>

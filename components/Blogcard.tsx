@@ -12,11 +12,11 @@ const BlogCard = ({ article }: IPropType) => {
   return (
     <div>
       <Link href={`/article/${article.attributes.Slug}`}>
-        <h1 className="text-xl text-dark font-bold hover:decoration-2 hover:underline hover:cursor-pointer hover:decoration-primary">
+        <h1 className="text-xl text-dark font-bold hover:decoration-2 hover:underline hover:cursor-pointer hover:decoration-primary my-1">
           {article.attributes.Title}
         </h1>
       </Link>
-      <div className="flex items-center my-4">
+      <div className="flex items-center my-3">
         <div className="rounded-lg overflow-hidden flex items-center justify-center mr-2">
           <Image
             src={`http://localhost:1337${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
