@@ -12,7 +12,7 @@ const BlogCard = ({ article }: IPropType) => {
   return (
     <div>
       <Link href={`/article/${article.attributes.Slug}`}>
-        <h1 className="text-xl text-gray-600 font-bold hover:decoration-2 hover:underline hover:cursor-pointer hover:decoration-primary">
+        <h1 className="text-xl text-dark font-bold hover:decoration-2 hover:underline hover:cursor-pointer hover:decoration-primary">
           {article.attributes.Title}
         </h1>
       </Link>
@@ -25,7 +25,7 @@ const BlogCard = ({ article }: IPropType) => {
             width={40}
           />
         </div>
-        <span className="text-sm font-bold text-gray-600">
+        <span className="text-black dark:text-white text-sm font-bold">
           {article.attributes.author.data.attributes.firstname}{' '}
           {article.attributes.author.data.attributes.lastname} on &nbsp;
           <span className="text-gray-400">
@@ -33,7 +33,7 @@ const BlogCard = ({ article }: IPropType) => {
           </span>
         </span>
       </div>
-      <div className="text-gray-500">
+      <div className="text-dark dark:text-white">
         {article.attributes.shortDescription.slice(0, 250)}
         {''}
         {article.attributes.shortDescription.length > 250 ? '...' : ''}

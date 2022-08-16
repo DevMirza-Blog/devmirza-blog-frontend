@@ -35,7 +35,7 @@ const Navbar = () => {
         </li>
       </ul>
       <button
-        className="px-6 py-2 bold bg-black dark:bg-white text-white dark:text-black rounded-full"
+        className="px-6 py-2 font-bold bg-black dark:bg-white text-white dark:text-black rounded-full"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         Toggle to {theme === 'light' ? 'dark' : 'light'}
