@@ -1,8 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 
 const Navbar = () => {
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) null
   return (
     <nav className="flex item-center justify-between py-6">
       <Link href="/">
@@ -25,6 +34,12 @@ const Navbar = () => {
           <a href="/company">Company</a>
         </li>
       </ul>
+      <button
+        className="px-6 py-2 bg-black dark:bg-white text-white dark:text-black"
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      >
+        Toggle to {theme === 'light' ? 'dark' : 'light'}
+      </button>
       <ul className="flex items-center">
         <li className="mr-6 font-medium text-gray-600">
           <a href="/login" className="hover:text-gray-400">
