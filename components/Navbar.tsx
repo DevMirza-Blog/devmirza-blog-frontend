@@ -21,27 +21,27 @@ const Navbar = () => {
         </div>
       </Link>
       <ul className="flex items-center">
-        <li className="mr-6 font-medium text-gray-600">
+        <li className="mr-6 font-medium  text-black dark:text-white">
           <a href="/products">Products</a>
         </li>
-        <li className="mr-6 font-medium text-gray-600">
-          <a href="/pricing">pricing</a>
+        <li className="mr-6 font-medium text-black dark:text-white">
+          <a href="/pricing">Pricing</a>
         </li>
-        <li className="mr-6 font-medium text-gray-600">
+        <li className="mr-6 font-medium text-black dark:text-white">
           <a href="/documentation">Docs</a>
         </li>
-        <li className="mr-6 font-medium text-gray-600">
+        <li className="mr-6 font-medium text-black dark:text-white">
           <a href="/company">Company</a>
         </li>
       </ul>
       <button
-        className="px-6 py-2 bg-black dark:bg-white text-white dark:text-black"
+        className="px-6 py-2 bold bg-black dark:bg-white text-white dark:text-black rounded-full"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         Toggle to {theme === 'light' ? 'dark' : 'light'}
       </button>
       <ul className="flex items-center">
-        <li className="mr-6 font-medium text-gray-600">
+        <li className="mr-6 font-medium text-black dark:text-white">
           <a href="/login" className="hover:text-gray-400">
             Log in
           </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
         <li className="font-medium text-gray-600">
           <a
             href="/signup"
-            className="bg-primary py-2 px-4 rounded-sm text-white hover:bg-primary-dark transition-all"
+            className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all"
           >
             Sign up
           </a>
