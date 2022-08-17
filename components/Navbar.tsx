@@ -21,6 +21,9 @@ const Navbar = () => {
         </div>
       </Link>
       <ul className="flex items-center">
+        <li className="mr-6 font-medium text-black dark:text-white">
+          <a href="/about">About</a>
+        </li>
         <li className="mr-6 font-medium  text-black dark:text-white">
           <a href="/products">Products</a>
         </li>

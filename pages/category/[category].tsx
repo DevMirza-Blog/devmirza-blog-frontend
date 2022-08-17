@@ -16,6 +16,7 @@ import { AxiosResponse } from 'axios'
 import qs from 'qs'
 import ArticleList from '../../components/ArticleList'
 import Pagination from '../../components/Pagination'
+import Divider from '../../components/Divider'
 
 interface IPropType {
   categories: {
@@ -54,6 +55,7 @@ const category = ({ categories, articles, slug }: IPropType) => {
         categories={categories.items}
         handleOnSearch={debounce(handleSearch, 500)}
       />
+      <Divider />
       <ArticleList articles={articles.items} />
       <Pagination
         page={page}
