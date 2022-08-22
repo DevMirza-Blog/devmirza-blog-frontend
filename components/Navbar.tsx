@@ -44,17 +44,12 @@ const Navbar = () => {
         Toggle to {theme === 'light' ? 'dark' : 'light'}
       </button>
       <ul className="flex items-center">
-        <li className="mr-6 font-medium text-black dark:text-white">
-          <a href="/login" className="hover:text-gray-400">
-            Log in
-          </a>
-        </li>
         <li className="font-medium text-gray-600">
           <a
-            href="/signup"
+            href="/login"
             className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all"
           >
-            Sign up
+            Sign In
           </a>
         </li>
       </ul>
