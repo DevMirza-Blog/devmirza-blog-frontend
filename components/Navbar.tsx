@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -46,7 +47,7 @@ const Navbar = () => {
       <ul className="flex items-center">
         <li className="font-medium text-gray-600">
           <a
-            href="/login"
+            href="/api/auth/signin"
             className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all"
           >
             Sign In
