@@ -2,7 +2,7 @@ import NextAuth, { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import FacebookProvider from 'next-auth/providers/facebook'
 import GithubProvider from 'next-auth/providers/github'
-import TwitterProvider from 'next-auth/providers/twitter'
+import DiscordProvider from 'next-auth/providers/discord'
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -18,10 +18,10 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
-    //TwitterProvider({
-    //  clientId: process.env.TWITTER_ID,
-    //  clientSecret: process.env.TWITTER_SECRET,
-    //}),
+    DiscordProvider({
+      clientId: process.env.DISCORD_ID,
+      clientSecret: process.env.DISCORD_SECRET
+    })
   ],
   theme: {
     colorScheme: 'dark',
