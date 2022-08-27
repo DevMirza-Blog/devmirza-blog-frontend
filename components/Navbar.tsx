@@ -3,10 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  const { data: session, status } = useSession()
+  const loading = status === 'loading'
 
   useEffect(() => {
     setMounted(true)
@@ -45,14 +48,35 @@ const Navbar = () => {
         Toggle to {theme === 'light' ? 'dark' : 'light'}
       </button>
       <ul className="flex items-center">
-        <li className="font-medium text-gray-600">
-          <a
-            href="/api/auth/signin"
-            className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all"
-          >
-            Sign In
-          </a>
-        </li>
+        {!session && (
+          <li className="font-medium text-gray-600">
+            <a
+              href="/api/auth/signin"
+              className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all"
+            >
+              Sign In
+            </a>
+          </li>
+        )}
+        {session?.user && (
+          <>
+            <a className="bg-primary py-2 px-4 rounded-full text-white dark:text-white font-bold">
+              Signed in as: {session.user.name}
+            </a>
+            <span className='flex items-center'>
+            <a
+              href={'/api/auth/signout'}
+              className='bg-white rounded-full text-white dark:text-black py-2 px-4 ml-2'
+              onClick={(e) => {
+                e.preventDefault()
+                signOut()
+              }}
+            >
+              Sign Out
+            </a>
+            </span>
+          </>
+        )}
       </ul>
     </nav>
   )
