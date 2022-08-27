@@ -7,6 +7,7 @@ import { signIn, signOut, useSession } from 'next-auth/react'
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false)
+  const [isSession, setIsSession] = useState(false)
   const { theme, setTheme } = useTheme()
   const { data: session, status } = useSession()
   const loading = status === 'loading'
@@ -15,7 +16,14 @@ const Navbar = () => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    setIsSession(true)
+  }, [])
+
   if (!mounted) null
+
+  if (!isSession) null
+
   return (
     <nav className="flex item-center justify-between py-6">
       <Link href="/">
@@ -52,7 +60,11 @@ const Navbar = () => {
           <li className="font-medium text-gray-600">
             <a
               href="/api/auth/signin"
-              className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all"
+              className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all font-bold"
+              onClick={(e) => {
+                e.preventDefault()
+                signIn()
+              }}
             >
               Sign In
             </a>
@@ -66,7 +78,7 @@ const Navbar = () => {
             <span className='flex items-center'>
             <a
               href={'/api/auth/signout'}
-              className='bg-white rounded-full text-white dark:text-black py-2 px-4 ml-2'
+              className='bg-black dark:bg-white rounded-full text-white dark:text-gray-600 py-2 px-4 ml-2 font-bold'
               onClick={(e) => {
                 e.preventDefault()
                 signOut()
