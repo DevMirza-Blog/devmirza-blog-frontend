@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { signIn, signOut, useSession } from 'next-auth/react'
+import styles from '../styles/navbar.module.css'
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false)
@@ -72,20 +73,26 @@ const Navbar = () => {
         )}
         {session?.user && (
           <>
+            {session.user.image && (
+              <span
+                style={{ backgroundImage: `url('${session.user.image}')` }}
+                className={styles.avatar}
+              />
+            )}
             <a className="bg-primary py-2 px-4 rounded-full text-white dark:text-white font-bold">
               Signed in as: {session.user.name}
             </a>
-            <span className='flex items-center'>
-            <a
-              href={'/api/auth/signout'}
-              className='bg-black dark:bg-white rounded-full text-white dark:text-gray-600 py-2 px-4 ml-2 font-bold'
-              onClick={(e) => {
-                e.preventDefault()
-                signOut()
-              }}
-            >
-              Sign Out
-            </a>
+            <span className="flex items-center">
+              <a
+                href={'/api/auth/signout'}
+                className="bg-black dark:bg-white rounded-full text-white dark:text-gray-600 py-2 px-4 ml-2 font-bold"
+                onClick={(e) => {
+                  e.preventDefault()
+                  signOut()
+                }}
+              >
+                Sign Out
+              </a>
             </span>
           </>
         )}
