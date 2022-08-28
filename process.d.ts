@@ -6,5 +6,7 @@ declare namespace NodeJS {
     GOOGLE_SECRET: string
     DISCORD_ID: string
     DISCORD_SECRET: string
+    FACEBOOK_ID: string
+    FACEBOOK_SECRET: string
   }
 }
