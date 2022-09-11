@@ -1,15 +1,19 @@
+/* A type definition for the MDXRemoteSerializeResult type. */
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
+/* Defining the interface for the Category object. */
 export interface ICategory {
   id: number;
   attributes: ICategoryAttribute;
 }
 
+/* Defining the interface for the Category object. */
 export interface ICategoryAttribute {
   Title: string;
   Slug: string;
 }
 
+/* Defining the interface for the Pagination object. */
 export interface IPagination {
   page: number;
   pageSize: number;
@@ -17,15 +21,18 @@ export interface IPagination {
   total: number;
 }
 
+/* Defining the interface for the Pagination object. */
 export interface IResourceMeta {
   pagination: IPagination;
 }
 
+/* Defining the interface for the CollectionResponse object. */
 export interface ICollectionResponse<T> {
   data: T;
   meta: IResourceMeta;
 }
 
+/* Defining the interface for the ImageData object. */
 export interface IImageData {
   data: {
     attributes: {
@@ -39,6 +46,7 @@ export interface IImageData {
   };
 }
 
+/* Defining the interface for the Author object. */
 export interface IAuthor {
   data: {
     attributes: {
@@ -59,6 +67,7 @@ export interface IAuthor {
   };
 }
 
+/* Defining the interface for the Article object. */
 export interface IArticlesAttribute {
   Title: string;
   body: string | MDXRemoteSerializeResult;
@@ -69,6 +78,7 @@ export interface IArticlesAttribute {
   shortDescription: string;
 }
 
+/* Defining the interface for the Article object. */
 export interface IArticle {
   id: number;
   attributes: IArticlesAttribute;
@@ -76,6 +86,7 @@ export interface IArticle {
 
 export type TDirection = 1 | -1;
 
+/* Defining the interface for the QueryOptions object. */
 export interface IQueryOptions {
   filters: any;
   sort: any;
