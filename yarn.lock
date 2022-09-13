@@ -1885,10 +1885,10 @@ jose@^4.1.4, jose@^4.3.7:
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.9.0.tgz#98ecaf81b13361d1931c0126e3f765549c782f92"
   integrity sha512-RgaqEOZLkVO+ViN3KkN44XJt9g7+wMveUv59sVLaTxONcUPc8ZpfqOCeLphVBZyih2dgkvZ0Ap1CNcokvY7Uyw==
 
-js-quiz-tool@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/js-quiz-tool/-/js-quiz-tool-1.1.0.tgz#cb2778ff8d14edcbfee68a49a053f42f933dbe45"
-  integrity sha512-m3vvpUC6iwLH46gy92M6uXA2Q3IQCXfUhSqRZ3Degzr3pYn3XTSM02S5t0U/4bYuFSwS0agbFKiejEJorHWDEg==
+js-quiz-tool@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/js-quiz-tool/-/js-quiz-tool-1.1.5.tgz#69bfa3f3f744cedfabc3c4b9b37319ae79c4f307"
+  integrity sha512-/xtQi7H52vQj8uJXcB5rtrWPjOUMFqCyQvPaTBVd1RrcV1oIURmtEWo781eyeOK+yB4Vwzr4ryoOdEa71gQDBw==
   dependencies:
     chalk "^5.0.1"
     chalk-animation "^2.0.3"
