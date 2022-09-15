@@ -17,6 +17,7 @@ import { debounce } from '../utils/index'
 import { fetchArticles, fetchCategories } from '../http'
 import Divider from '../components/Divider'
 
+/* Defining the props that the component will receive. */
 interface IPropTypes {
   categories: {
     items: ICategory[]
@@ -27,11 +28,19 @@ interface IPropTypes {
   }
 }
 
+/* A React component. */
 const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
+  /* A hook that gives you access to the router. */
   const router = useRouter()
 
+  /* Destructuring the pagination object. */
   const { page, pageCount } = articles.pagination
 
+  /**
+   * When the user types in the search bar, the search query is passed to the handleSearch function,
+   * which then pushes the query to the URL.
+   * @param {string} query - string - the search query
+   */
   const handleSearch = (query: string) => {
     router.push(`/?search=${query}`)
   }
@@ -55,7 +64,7 @@ const Home: NextPage<IPropTypes> = ({ categories, articles }) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  // Articles
+  /* Defining the options object. */
   const options: Partial<IQueryOptions> = {
     populate: ['author.avatar'],
     sort: ['id:desc'],
@@ -65,6 +74,8 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     },
   }
 
+  /* This is a conditional statement that checks if the query object has a search property. If it does,
+  it adds a filter to the options object. */
   if (query.search) {
     options.filters = {
       Title: {
@@ -73,15 +84,20 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     }
   }
 
+  /* Converting the options object into a query string. */
   const queryString = qs.stringify(options)
 
+  /* Destructuring the data property from the AxiosResponse object and assigning it to the articles
+  variable. */
   const { data: articles }: AxiosResponse<ICollectionResponse<IArticle[]>> =
     await fetchArticles(queryString)
 
-  // categories
+  /* Destructuring the data property from the AxiosResponse object and assigning it to the categories
+  variable. */
   const { data: categories }: AxiosResponse<ICollectionResponse<ICategory[]>> =
     await fetchCategories()
 
+  /* Returning the props that the component will receive. */
   return {
     props: {
       categories: {
@@ -95,4 +111,5 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   }
 }
 
+/* Exporting the component. */
 export default Home
