@@ -1880,10 +1880,10 @@ jose@^4.1.4, jose@^4.3.7:
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.9.0.tgz#98ecaf81b13361d1931c0126e3f765549c782f92"
   integrity sha512-RgaqEOZLkVO+ViN3KkN44XJt9g7+wMveUv59sVLaTxONcUPc8ZpfqOCeLphVBZyih2dgkvZ0Ap1CNcokvY7Uyw==
 
-js-quiz-tool@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/js-quiz-tool/-/js-quiz-tool-1.1.6.tgz#6ecd0257134e5d1b2af2f66337b091b7105a777f"
-  integrity sha512-qnSFSok6qQAGDRtrP2V61zGRF/VPH7mDT4q80ecNDmucbL+0ARxRpt/bcn5F7hzdD90pmIUVaqTfF1CGAqigqA==
+js-quiz-tool@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/js-quiz-tool/-/js-quiz-tool-1.1.7.tgz#90fb49015b160b53dcdef4df9b297545ea6261b6"
+  integrity sha512-/4g5JUqoeqm+Fv7qh2GAjZFOspvtKmFQ/8i4pdh/mNdN3mPkZ9nCe16gU2NnxXqObtEapmJGIGIcF48ZjENcUQ==
   dependencies:
     chalk "^5.0.1"
     chalk-animation "^2.0.3"
@@ -1891,6 +1891,7 @@ js-quiz-tool@^1.1.6:
     gradient-string "^2.0.1"
     inquirer "^9.1.1"
     nanospinner "^1.1.0"
+    simple-update-notifier "^1.0.7"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -3205,6 +3206,11 @@ semver@^7.3.4, semver@^7.3.7:
   dependencies:
     lru-cache "^6.0.0"
 
+semver@~7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
+  integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
+
 shebang-command@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
@@ -3230,6 +3236,13 @@ signal-exit@^3.0.2:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
+
+simple-update-notifier@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/simple-update-notifier/-/simple-update-notifier-1.0.7.tgz#7edf75c5bdd04f88828d632f762b2bc32996a9cc"
+  integrity sha512-BBKgR84BJQJm6WjWFMHgLVuo61FBDSj1z/xSFUIozqO6wO7ii0JxCqlIud7Enr/+LhlbNI0whErq96P2qHNWew==
+  dependencies:
+    semver "~7.0.0"
 
 slash@^3.0.0:
   version "3.0.0"
