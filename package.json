@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.0.0",
     "next": "12.2.5",
     "next-auth": "4.10.3",
     "next-mdx-remote": "^4.1.0",
