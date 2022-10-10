@@ -2,15 +2,16 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import type { Session } from 'next-auth'
 
+import { SessionProvider } from 'next-auth/react'
+import { ThemeProvider } from 'next-themes'
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import NextNProgress from 'nextjs-progressbar'
-import { ThemeProvider } from 'next-themes'
 import Divider from '../components/Divider'
-import { SessionProvider } from 'next-auth/react'
+import NextNProgress from 'nextjs-progressbar'
 
 function MyApp({
-  Component, 
+  Component,
   pageProps: { session, ...pageProps },
 }: AppProps<{ session: Session }>) {
   return (
