@@ -12,6 +12,9 @@ export default function Home() {
           <h2 className="text-5xl max-w-xl mx-auto mt-8 text-left lg:text-center font-sppoky animate-pulse">
             500 Internal Server Error
           </h2>
+          <p className="text-2xl max-w-xl mx-auto mt-8 text-left lg:text-center font-spooky animate-pulse">
+            The connection to the server is unstable, that&apos;s why we cannot process your request.
+          </p>
         </div>
       </div>
     </>
