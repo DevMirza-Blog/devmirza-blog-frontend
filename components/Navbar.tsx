@@ -51,7 +51,7 @@ const Navbar = () => {
         </li>
       </ul>
       <button
-        className="px-6 py-2 font-bold bg-black dark:bg-white text-white dark:text-black rounded-full"
+        className="px-6 py-2 font-bold bg-black dark:bg-white text-white dark:text-black rounded-xl"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         Toggle to {theme === 'light' ? 'dark' : 'light'}
@@ -61,7 +61,7 @@ const Navbar = () => {
           <li className="font-medium text-gray-600">
             <a
               href="/api/auth/signin"
-              className="bg-primary py-2 px-4 rounded-full text-white hover:bg-primary-dark transition-all font-bold"
+              className="bg-primary py-2 px-4 rounded-xl text-white hover:bg-primary-dark transition-all font-bold"
               onClick={(e) => {
                 e.preventDefault()
                 signIn()
@@ -79,13 +79,13 @@ const Navbar = () => {
                 className={styles.avatar}
               />
             )}
-            <a className="bg-primary py-2 px-4 rounded-full text-white dark:text-white font-bold">
+            <a className="bg-primary py-2 px-4 rounded-xl text-white dark:text-white font-bold">
               Signed in as: {session.user.name}
             </a>
             <span className="flex items-center">
               <a
                 href={'/api/auth/signout'}
-                className="bg-black dark:bg-white rounded-full text-white dark:text-gray-600 py-2 px-4 ml-2 font-bold"
+                className="bg-black dark:bg-white rounded-xl text-white dark:text-gray-600 py-2 px-4 ml-2 font-bold"
                 onClick={(e) => {
                   e.preventDefault()
                   signOut()
