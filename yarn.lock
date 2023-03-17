@@ -759,6 +759,11 @@ chalk@^5.0.0, chalk@^5.1.2:
   resolved "https://registry.npmjs.org/chalk/-/chalk-5.1.2.tgz"
   integrity sha512-E5CkT4jWURs1Vy5qGJye+XwCkNj7Od3Af7CP6SujMetSMkLs8Do2RWJK5yx1wamHV/op8Rz+9rltjaTQWDnEFQ==
 
+chalk@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.2.0.tgz#249623b7d66869c673699fb66d65723e54dfcfb3"
+  integrity sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==
+
 character-entities-html4@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/character-entities-html4/-/character-entities-html4-2.1.0.tgz"
@@ -2004,18 +2009,18 @@ jose@^4.10.0, jose@^4.11.4:
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.13.1.tgz#449111bb5ab171db85c03f1bd2cb1647ca06db1c"
   integrity sha512-MSJQC5vXco5Br38mzaQKiq9mwt7lwj2eXpgpRyQYNHYt2lq1PjkWa7DLXX0WVcQLE9HhMh3jPiufS7fhJf+CLQ==
 
-js-quiz-tool@^1.1.12:
-  version "1.1.12"
-  resolved "https://registry.yarnpkg.com/js-quiz-tool/-/js-quiz-tool-1.1.12.tgz#7b99b0b295eb2cebcffc52fa820028214bfbb8f5"
-  integrity sha512-VLBTBbRu3TfEWjJ+Nj0jKIYox3QxTIlRmswJZNxh5NfAMEdA3jQwYTBuUBoJ2cbo+AvAw7jBBFrixL568Sf80g==
+js-quiz-tool@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/js-quiz-tool/-/js-quiz-tool-1.2.0.tgz#53a0b7c524627b6c82a70eac396ff7a6827afd11"
+  integrity sha512-UxAGvb1HQdjt88TWuEoviKzJnaKm1E2XZw6b5TMcmgF5K4V/ml6hUqeMmScWXqEmwxoGGjWLZPbx/ejsMy+Ucg==
   dependencies:
-    chalk "^5.1.2"
+    chalk "^5.2.0"
     chalk-animation "^2.0.3"
     figlet "^1.5.2"
     gradient-string "^2.0.1"
     inquirer "^9.1.4"
     nanospinner "^1.1.0"
-    simple-update-notifier "^1.0.7"
+    simple-update-notifier "^1.1.0"
 
 js-sdsl@^4.1.4:
   version "4.1.5"
@@ -3402,10 +3407,10 @@ signal-exit@^3.0.2:
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-simple-update-notifier@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.npmjs.org/simple-update-notifier/-/simple-update-notifier-1.0.7.tgz"
-  integrity sha512-BBKgR84BJQJm6WjWFMHgLVuo61FBDSj1z/xSFUIozqO6wO7ii0JxCqlIud7Enr/+LhlbNI0whErq96P2qHNWew==
+simple-update-notifier@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/simple-update-notifier/-/simple-update-notifier-1.1.0.tgz#67694c121de354af592b347cdba798463ed49c82"
+  integrity sha512-VpsrsJSUcJEseSbMHkrsrAVSdvVS5I96Qo1QAQ4FxQ9wXFcB+pjj7FB7/us9+GcgfW4ziHtYMc1J0PLczb55mg==
   dependencies:
     semver "~7.0.0"
 
