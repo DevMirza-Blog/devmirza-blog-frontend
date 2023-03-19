@@ -4,6 +4,7 @@ import type { Session } from 'next-auth'
 
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from 'next-themes'
+import { Analytics } from '@vercel/analytics/next'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -23,6 +24,7 @@ function MyApp({
             <Navbar />
             <main className="pb-32">
               <Component {...pageProps} />
+              <Analytics />
               <Divider />
             </main>
             <Footer />
