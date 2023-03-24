@@ -14,10 +14,7 @@ export default function Home() {
               404, You&apos;ve taken a wrong turn
             </h2>
             <p className="text-2xl max-w-xl mx-auto mt-8 text-left lg:text-center font-spooky animate-pulse">
-              The page you are looking for does not exist.
-            </p>
-            <p className="max-w-xl mx-auto mt-8 text-left lg:text-center">
-              Looks like you got lost in the party.
+              We're sorry, the page you're looking for cannot be found. It may have been moved, deleted, or never existed in the first place. Please check the URL and try again.
             </p>
           </div>
         </div>
