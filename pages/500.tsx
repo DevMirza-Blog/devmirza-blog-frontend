@@ -13,7 +13,7 @@ export default function Home() {
             500 Internal Server Error
           </h2>
           <p className="text-2xl max-w-xl mx-auto mt-8 text-left lg:text-center font-spooky animate-pulse">
-            The connection to the server is unstable, that&apos;s why we cannot process your request.
+            Oops! Our servers are having a meltdown. We're sorry for the inconvenience. Our team has been alerted and is working on a fix. Please try again later.
           </p>
         </div>
       </div>
