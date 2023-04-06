@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@vercel/analytics": "^0.1.11",
-    "axios": "1.1.3",
+    "axios": "1.3.5",
     "js-quiz-tool": "^1.1.12",
     "next": "^13.2.4",
     "next-auth": "^4.20.1",
