@@ -27,4 +27,4 @@ jobs:
               run: yarn install
 
             - name: Build
-              run: yarn run build --if-present
+              run: yarn run build
