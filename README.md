@@ -15,5 +15,5 @@ The Blog written in [Next.js](https://nextjs.org/) and [React](https://reactjs.o
 ## Link
 
 [🌏 Website](https://blog.devmirza.ml) <br />
-[📦 Github Repo](https://github.com/DevMirza-Blog/devmirza-blog-frontend) <br />
+[📦 Backend](https://github.com/DevMirza-Blog/devmirza-blog-backend) <br />
 [✔️ Checks Status](https://d94ac398.checklyhq.com)
