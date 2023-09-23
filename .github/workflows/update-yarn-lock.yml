@@ -16,11 +16,11 @@ jobs:
       - name: Set up Node.js (if applicable)
         uses: actions/setup-node@v3
         with:
-          node-version: 16 # Change to your desired Node.js version
+          node-version: 18 # Change to your desired Node.js version
 
       - name: Install dependencies and update lock file
         run: |
-          npm update
+          yarn
 
       - name: Commit new data
         uses: stefanzweifel/git-auto-commit-action@v4.15.4
