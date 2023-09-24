@@ -11,6 +11,7 @@ The Blog written in [Next.js](https://nextjs.org/) and [React](https://reactjs.o
 - SEO
 - Categories
 - Search
+- Login & Signup
 
 ## Link
 
