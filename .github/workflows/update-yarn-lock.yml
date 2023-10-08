@@ -17,14 +17,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18 # Change to your desired Node.js version
-
-      - name: Install Yarn@4
-        run: npm i -g yarn@4.0.0-rc.53
         
       - name: Install dependencies and update lock file
         run: |
           yarn
-          yarn up
 
       - name: Commit new data
         uses: stefanzweifel/git-auto-commit-action@v4.15.4
