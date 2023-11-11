@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18 # Change to your desired Node.js version
+
+      - name: Enable Corepack
+        run: corepack enable
         
       - name: Install dependencies
         run: |
