@@ -937,14 +937,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.4.0":
-  version: 1.6.1
-  resolution: "axios@npm:1.6.1"
+"axios@npm:0":
+  version: 0.27.2
+  resolution: "axios@npm:0.27.2"
   dependencies:
-    follow-redirects: "npm:^1.15.0"
+    follow-redirects: "npm:^1.14.9"
     form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: ca2c6f56659a7f19e4a99082f549fe151952f6fd8aa72ed148559ab2d6a32ce37cd5dc72ce6d4d3cd91f0c1e2617c7c95c20077e5e244a79f319a6c0ce41204f
+  checksum: 76d673d2a90629944b44d6f345f01e58e9174690f635115d5ffd4aca495d99bcd8f95c590d5ccb473513f5ebc1d1a6e8934580d0c57cdd0498c3a101313ef771
   languageName: node
   linkType: hard
 
@@ -1500,7 +1499,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.15"
     "@vercel/analytics": "npm:^1.1.1"
     autoprefixer: "npm:^10.4.16"
-    axios: "npm:^1.4.0"
+    axios: "npm:0"
     eslint: "npm:^8.53.0"
     eslint-config-next: "npm:^13.5.6"
     js-quiz-tool: "npm:^1.2.4"
@@ -2214,7 +2213,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.0":
+"follow-redirects@npm:^1.14.9":
   version: 1.15.3
   resolution: "follow-redirects@npm:1.15.3"
   peerDependenciesMeta:
@@ -4839,13 +4838,6 @@ __metadata:
   version: 6.4.0
   resolution: "property-information@npm:6.4.0"
   checksum: 48ba202f12c6abc82d37135452377dd528fae90a151bcffb28582d58d9db6e42ce835c91e2fcb12e875200b32bcaed90de4807dfb37c687f7cccf2597ccb55e1
-  languageName: node
-  linkType: hard
-
-"proxy-from-env@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "proxy-from-env@npm:1.1.0"
-  checksum: fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
   languageName: node
   linkType: hard
 
