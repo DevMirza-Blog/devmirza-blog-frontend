@@ -28,10 +28,5 @@ jobs:
         run: |
           yarn install
 
-      - name: Commit new data
-        uses: stefanzweifel/git-auto-commit-action@v4.15.4
-        with:
-          commit_message: ":arrow_up: Update `package-lock.json` to latest"
-          commit_user_name: Zaid-maker
-          commit_user_email: pzhafeez@gmail.com
-          commit_author: Zaid-maker <pzhafeez@gmail.com>
+      - name: Build
+        run: yarn build
