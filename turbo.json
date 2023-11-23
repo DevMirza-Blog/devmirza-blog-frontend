@@ -4,6 +4,8 @@
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "lint": {}
+    "lint": {
+      "cache": true
+    }
   }
 }
