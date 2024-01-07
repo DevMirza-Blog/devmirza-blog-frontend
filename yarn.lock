@@ -507,12 +507,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.15":
-  version: 18.2.15
-  resolution: "@types/react-dom@npm:18.2.15"
+"@types/react-dom@npm:^18.2.18":
+  version: 18.2.18
+  resolution: "@types/react-dom@npm:18.2.18"
   dependencies:
-    "@types/react": "npm:*"
-  checksum: 57ea7e9e210d95fa18fde82fc585cb6252c9118c8793a38b37b07ccbba05d09d14f88cf76af46eecda41c430b4400f789a4bbc505eec459a15cbaf13f56f887a
+    "@types/react": "*"
+  checksum: 8/8e3da404c980e2b2a76da3852f812ea6d8b9d0e7f5923fbaf3bfbbbfa1d59116ff91c129de8f68e9b7668a67ae34484fe9df74d5a7518cf8591ec07a0c4dad57
   languageName: node
   linkType: hard
 
@@ -1496,7 +1496,7 @@ __metadata:
     "@types/node": ^18.11.11
     "@types/qs": ^6.9.10
     "@types/react": ^18.0.26
-    "@types/react-dom": ^18.2.15
+    "@types/react-dom": ^18.2.18
     "@vercel/analytics": ^1.1.1
     autoprefixer: ^10.4.16
     axios: 0
