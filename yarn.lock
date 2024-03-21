@@ -500,10 +500,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/qs@npm:^6.9.13":
-  version: 6.9.13
-  resolution: "@types/qs@npm:6.9.13"
-  checksum: 8/0a8c55694fee7027dda7e1451936a5a0f8f33a8a5ea24a2e5b0cf2dc221fc21afc6939ff74ea82c5107924e87192a403e60904c339abc3cbc19bd5e90e6e1ce0
+"@types/qs@npm:^6.9.14":
+  version: 6.9.14
+  resolution: "@types/qs@npm:6.9.14"
+  checksum: 8/d3b76021d36b86c0063ec4b7373e9fa470754914e486fbfe54b3a8866dad037800a2c2068ecbcaa9399ae3ed15772a26b07e67793ed2519cf2de199104014716
   languageName: node
   linkType: hard
 
@@ -1502,7 +1502,7 @@ __metadata:
   resolution: "devmirza-blog-frontend@workspace:."
   dependencies:
     "@types/node": ^18.11.11
-    "@types/qs": ^6.9.13
+    "@types/qs": ^6.9.14
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.2.22
     "@vercel/analytics": ^1.1.2
