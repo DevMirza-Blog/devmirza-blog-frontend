@@ -618,12 +618,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "@vercel/analytics@npm:1.1.2"
+"@vercel/analytics@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@vercel/analytics@npm:1.2.2"
   dependencies:
-    server-only: "npm:^0.0.1"
-  checksum: 1b8b98eaed3601d40cd265f8332525bbdb606e4e3545a37a0f1d05b28b84a95e7611ae2c52bf7c23ec6d763c2672ef5f3abf453770326a64e9f313ce2089e266
+    server-only: ^0.0.1
+  peerDependencies:
+    next: ">= 13"
+    react: ^18 || ^19
+  peerDependenciesMeta:
+    next:
+      optional: true
+    react:
+      optional: true
+  checksum: 8/5913caeb2077d3d9c2eddabed90e40e29762e9e53941d3e1337daa0a60423ffef2a2c0b5a743ff37ea1aa9cfe7eb3159e4dff91cd4843a8503be5680c2faa98d
   languageName: node
   linkType: hard
 
@@ -1512,7 +1520,7 @@ __metadata:
     "@types/qs": ^6.9.13
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.2.23
-    "@vercel/analytics": ^1.1.2
+    "@vercel/analytics": ^1.2.2
     autoprefixer: ^10.4.19
     axios: 1
     eslint: ^8.57.0
