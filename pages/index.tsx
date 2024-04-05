@@ -1,9 +1,13 @@
 import { AxiosResponse } from 'axios'
 import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import qs from 'qs'
 import ArticleList from '../components/ArticleList'
-import Tabs from '../components/Tabs'
+import Divider from '../components/Divider'
 import Pagination from '../components/Pagination'
+import Tabs from '../components/Tabs'
+import { fetchArticles, fetchCategories } from '../http'
 import {
   IArticle,
   ICategory,
@@ -11,11 +15,7 @@ import {
   IPagination,
   IQueryOptions,
 } from '../types'
-import qs from 'qs'
-import { useRouter } from 'next/router'
 import { debounce } from '../utils/index'
-import { fetchArticles, fetchCategories } from '../http'
-import Divider from '../components/Divider'
 
 /* Defining the props that the component will receive. */
 interface IPropTypes {

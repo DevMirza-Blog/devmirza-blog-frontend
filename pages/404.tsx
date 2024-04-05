@@ -14,7 +14,9 @@ export default function Home() {
               404, You&apos;ve taken a wrong turn
             </h2>
             <p className="text-2xl max-w-xl mx-auto mt-8 text-left lg:text-center font-spooky animate-pulse">
-              We're sorry, the page you're looking for cannot be found. It may have been moved, deleted, or never existed in the first place. Please check the URL and try again.
+              We&apos;re sorry, the page you&apos;re looking for cannot be
+              found. It may have been moved, deleted, or never existed in the
+              first place. Please check the URL and try again.
             </p>
           </div>
         </div>
