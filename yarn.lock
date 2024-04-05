@@ -618,20 +618,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "@vercel/analytics@npm:1.2.2"
-  dependencies:
-    server-only: "npm:^0.0.1"
+"@vercel/speed-insights@npm:^1.0.10":
+  version: 1.0.10
+  resolution: "@vercel/speed-insights@npm:1.0.10"
   peerDependencies:
+    "@sveltejs/kit": ^1 || ^2
     next: ">= 13"
     react: ^18 || ^19
+    svelte: ^4
+    vue: ^3
+    vue-router: ^4
   peerDependenciesMeta:
+    "@sveltejs/kit":
+      optional: true
     next:
       optional: true
     react:
       optional: true
-  checksum: 10/18b9e006249e1df214c65e4fdb0672522edf4f690b57e460e714b2119faf0f872ddecc92f543797533cb26b9a09308821e30554b2329b17f46eff769a5f9f855
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: 10/5ceaad884a37c539e19f70da383f46d4e937dbd6fbad3c0d27b2c5748ca60649ce2259d24788d8564fba051926c444bbbe6e8549e303d75eb9cfb6edc2dedbde
   languageName: node
   linkType: hard
 
@@ -1520,7 +1530,7 @@ __metadata:
     "@types/qs": "npm:^6.9.13"
     "@types/react": "npm:^18.0.26"
     "@types/react-dom": "npm:^18.2.23"
-    "@vercel/analytics": "npm:^1.2.2"
+    "@vercel/speed-insights": "npm:^1.0.10"
     autoprefixer: "npm:^10.4.19"
     axios: "npm:1"
     eslint: "npm:^8.57.0"
@@ -5263,13 +5273,6 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10/be264384c7c2f283d52a28cff172a4a25b99cc10f1481ece9479987e7145d197d3c00d8a0b2662316224fb346e97f770545126b0af88f94fee0292004cf809a1
-  languageName: node
-  linkType: hard
-
-"server-only@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "server-only@npm:0.0.1"
-  checksum: 10/c432348956641ea3f460af8dc3765f3a1bdbcf7a1e0205b0756d868e6e6fe8934cdee6bff68401a1dd49ba4a831c75916517a877446d54b334f7de36fa273e53
   languageName: node
   linkType: hard
 
