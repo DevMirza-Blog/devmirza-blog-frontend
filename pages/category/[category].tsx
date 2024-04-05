@@ -1,6 +1,13 @@
-import React from 'react'
+import { AxiosResponse } from 'axios'
+import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import { capitalizeFirstLetter, debounce, makeCategory } from '../../utils'
+import { useRouter } from 'next/router'
+import qs from 'qs'
+import ArticleList from '../../components/ArticleList'
+import Divider from '../../components/Divider'
+import Pagination from '../../components/Pagination'
+import Tabs from '../../components/Tabs'
+import { fetchArticles, fetchCategories } from '../../http'
 import {
   IArticle,
   ICategory,
@@ -8,15 +15,7 @@ import {
   IPagination,
   IQueryOptions,
 } from '../../types'
-import Tabs from '../../components/Tabs'
-import { useRouter } from 'next/router'
-import { GetServerSideProps } from 'next'
-import { fetchArticles, fetchCategories } from '../../http'
-import { AxiosResponse } from 'axios'
-import qs from 'qs'
-import ArticleList from '../../components/ArticleList'
-import Pagination from '../../components/Pagination'
-import Divider from '../../components/Divider'
+import { capitalizeFirstLetter, debounce, makeCategory } from '../../utils'
 
 /* Defining the shape of the props object. */
 interface IPropType {
@@ -31,7 +30,7 @@ interface IPropType {
   slug: string
 }
 
-const category = ({ categories, articles, slug }: IPropType) => {
+const Category = ({ categories, articles, slug }: IPropType) => {
   /* Destructuring the page and pageCount from the articles.pagination object. */
   const { page, pageCount } = articles.pagination
   /* Destructuring the query object from the router object. */
@@ -138,4 +137,4 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   }
 }
 
-export default category
+export default Category
