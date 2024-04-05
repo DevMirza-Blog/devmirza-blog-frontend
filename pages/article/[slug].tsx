@@ -1,12 +1,12 @@
-import { GetServerSideProps } from 'next'
-import Head from 'next/head'
-import { IArticle, ICollectionResponse } from '../../types'
-import qs from 'qs'
-import { formatDate, serializeMarkdown } from '../../utils'
 import { AxiosResponse } from 'axios'
-import { fetchArticleBySlug } from '../../http'
-import Image from 'next/image'
+import { GetServerSideProps } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import Head from 'next/head'
+import Image from 'next/image'
+import qs from 'qs'
+import { fetchArticleBySlug } from '../../http'
+import { IArticle, ICollectionResponse } from '../../types'
+import { formatDate, serializeMarkdown } from '../../utils'
 
 interface IPropType {
   article: IArticle
