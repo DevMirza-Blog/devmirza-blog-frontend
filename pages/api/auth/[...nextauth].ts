@@ -1,8 +1,5 @@
 import NextAuth, { NextAuthOptions } from 'next-auth'
-import GoogleProvider from 'next-auth/providers/google'
-import FacebookProvider from 'next-auth/providers/facebook'
 import GithubProvider from 'next-auth/providers/github'
-import DiscordProvider from 'next-auth/providers/discord'
 
 export const authOptions: NextAuthOptions = {
   providers: [
