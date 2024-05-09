@@ -470,12 +470,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.11.11":
-  version: 18.18.9
-  resolution: "@types/node@npm:18.18.9"
+"@types/node@npm:^20.12.11":
+  version: 20.12.11
+  resolution: "@types/node@npm:20.12.11"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/ebd98b117c868edc597807cd0dab214b6110b9cd5ee406632641d0cf5b8bd7cb199caaac657a046d9203c441dbcfb3c71154ffa2d615ec89f80e6972143e6ec8
+  checksum: 10/c6afe7c2c4504a4f488814d7b306ebad16bf42cbb43bf9db9fe1aed8c5fb99235593c3be5088979a64526b106cf022256688e2f002811be8273d87dc2e0d484f
   languageName: node
   linkType: hard
 
@@ -1526,7 +1526,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "devmirza-blog-frontend@workspace:."
   dependencies:
-    "@types/node": "npm:^18.11.11"
+    "@types/node": "npm:^20.12.11"
     "@types/qs": "npm:^6.9.13"
     "@types/react": "npm:^18.0.26"
     "@types/react-dom": "npm:^18.2.23"
