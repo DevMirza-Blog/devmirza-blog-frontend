@@ -19,8 +19,8 @@
     "next-themes": "^0.2.1",
     "nextjs-progressbar": "^0.0.16",
     "qs": "^6.11.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
