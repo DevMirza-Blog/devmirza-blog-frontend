@@ -618,14 +618,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/speed-insights@npm:^1.0.12":
-  version: 1.0.12
-  resolution: "@vercel/speed-insights@npm:1.0.12"
+"@vercel/speed-insights@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@vercel/speed-insights@npm:1.2.0"
   peerDependencies:
     "@sveltejs/kit": ^1 || ^2
     next: ">= 13"
-    react: ^18 || ^19
-    svelte: ^4
+    react: ^18 || ^19 || ^19.0.0-rc
+    svelte: ">= 4"
     vue: ^3
     vue-router: ^4
   peerDependenciesMeta:
@@ -641,7 +641,7 @@ __metadata:
       optional: true
     vue-router:
       optional: true
-  checksum: 10/eb8ab819afa32fd0a9f32fc292e24f2f70742e874e606fcbd8f21008ffa349841c90a2146fe1251d5c812872c557b12958b4a9fb88eb874b4ad446f3af8b9cc1
+  checksum: 10/3c453bd5b21a4e43e1810efbc51f0f0d0f91c7a934a024b4c4cd80d6c31960f7376692667628dd544aab1e42b76d65777ec419ef4e2f7e8c97091c5630872fb8
   languageName: node
   linkType: hard
 
@@ -1530,7 +1530,7 @@ __metadata:
     "@types/qs": "npm:^6.9.15"
     "@types/react": "npm:^18.0.26"
     "@types/react-dom": "npm:^18.3.0"
-    "@vercel/speed-insights": "npm:^1.0.12"
+    "@vercel/speed-insights": "npm:^1.2.0"
     autoprefixer: "npm:^10.4.19"
     axios: "npm:1"
     eslint: "npm:^8.57.0"
